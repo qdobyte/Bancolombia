@@ -1,0 +1,12 @@
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\FrontEndWindowsForms.exe.config
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\FrontEndWindowsForms.exe
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\FrontEndWindowsForms.pdb
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.csprojAssemblyReference.cache
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.Properties.Resources.resources
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.csproj.GenerateResource.cache
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.csproj.CopyComplete
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.exe
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.pdb
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.FrontWindow.resources
