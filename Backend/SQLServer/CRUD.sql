@@ -134,7 +134,5 @@ go
 
 exec consultarProductosPorCliente '1087986486'
 
-
-
 select * from Credito
 select * from Cliente

@@ -9,7 +9,6 @@ C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\D
 C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.csproj.CopyComplete
 C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.exe
 C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.pdb
-C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.FrontWindow.resources
 C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\FrontEndWindowsForms.exe.config
 C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\FrontEndWindowsForms.exe
 C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\FrontEndWindowsForms.pdb
@@ -24,3 +23,7 @@ C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debu
 C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\Newtonsoft.Json.xml
 C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.CreditosForm.resources
 C:\Users\QdoByte\source\repos\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.ClientesForm.resources
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.ClientesForm.resources
+C:\Users\VP08\Documents\projects\Bancolombia\FrontEnd\FrontEndWindowsForms\obj\Debug\FrontEndWindowsForms.CreditosForm.resources

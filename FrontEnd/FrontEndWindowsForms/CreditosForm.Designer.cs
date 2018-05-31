@@ -35,6 +35,7 @@
             this.btnCreditosDesembolsar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.CreditCard = new Bunifu.Framework.UI.BunifuCards();
+            this.dropCreditosProducto = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtCreditosMonto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCreditosPlazo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -48,7 +49,6 @@
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.btnCloseUserMessage = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblUserMessage = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dropCreditosProducto = new Bunifu.Framework.UI.BunifuDropdown();
             this.CreditPanelHeader.SuspendLayout();
             this.clientNavbar.SuspendLayout();
             this.CreditCard.SuspendLayout();
@@ -177,8 +177,27 @@
             this.CreditCard.Name = "CreditCard";
             this.CreditCard.RightSahddow = true;
             this.CreditCard.ShadowDepth = 40;
-            this.CreditCard.Size = new System.Drawing.Size(917, 464);
+            this.CreditCard.Size = new System.Drawing.Size(692, 314);
             this.CreditCard.TabIndex = 3;
+            // 
+            // dropCreditosProducto
+            // 
+            this.dropCreditosProducto.BackColor = System.Drawing.Color.Transparent;
+            this.dropCreditosProducto.BorderRadius = 3;
+            this.dropCreditosProducto.DisabledColor = System.Drawing.Color.Gray;
+            this.dropCreditosProducto.ForeColor = System.Drawing.Color.White;
+            this.dropCreditosProducto.Items = new string[] {
+        "libreInversion",
+        "vehiculo",
+        "vivienda"};
+            this.dropCreditosProducto.Location = new System.Drawing.Point(216, 114);
+            this.dropCreditosProducto.Name = "dropCreditosProducto";
+            this.dropCreditosProducto.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.dropCreditosProducto.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.dropCreditosProducto.selectedIndex = -1;
+            this.dropCreditosProducto.Size = new System.Drawing.Size(286, 35);
+            this.dropCreditosProducto.TabIndex = 4;
+            this.dropCreditosProducto.Tag = "Producto";
             // 
             // bunifuImageButton1
             // 
@@ -427,25 +446,6 @@
             this.lblUserMessage.TabIndex = 1;
             this.lblUserMessage.Text = "Ingrese cédula y presione el botón Verificar Viabilidad";
             this.lblUserMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dropCreditosProducto
-            // 
-            this.dropCreditosProducto.BackColor = System.Drawing.Color.Transparent;
-            this.dropCreditosProducto.BorderRadius = 3;
-            this.dropCreditosProducto.DisabledColor = System.Drawing.Color.Gray;
-            this.dropCreditosProducto.ForeColor = System.Drawing.Color.White;
-            this.dropCreditosProducto.Items = new string[] {
-        "libreInversion",
-        "vehiculo",
-        "vivienda"};
-            this.dropCreditosProducto.Location = new System.Drawing.Point(216, 114);
-            this.dropCreditosProducto.Name = "dropCreditosProducto";
-            this.dropCreditosProducto.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.dropCreditosProducto.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.dropCreditosProducto.selectedIndex = -1;
-            this.dropCreditosProducto.Size = new System.Drawing.Size(286, 35);
-            this.dropCreditosProducto.TabIndex = 4;
-            this.dropCreditosProducto.Tag = "Producto";
             // 
             // CreditosForm
             // 

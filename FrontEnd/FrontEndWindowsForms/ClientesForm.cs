@@ -104,8 +104,6 @@ namespace FrontEndWindowsForms
                 txtClientScoring.Text = jObject["Scoring"].ToString();
                 this.MostrarMensaje("Consulta ejecutada correctamente");
             }
-            
-            
         }
 
         private void btnCreditos_Click(object sender, EventArgs e)
