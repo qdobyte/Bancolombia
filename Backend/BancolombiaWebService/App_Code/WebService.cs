@@ -108,9 +108,10 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public List<CreditosModel> ConsultarProductosPorCliente(string cedula) {
+    public string ConsultarProductosPorCliente(string cedula) {
         CreditosModel creditosModel = new CreditosModel();
-        return creditosModel.ConsultarProductosPorCliente(cedula);
+        JavaScriptSerializer js = new JavaScriptSerializer();
+        return js.Serialize(creditosModel.ConsultarProductosPorCliente(cedula));
     }
     #endregion
 }

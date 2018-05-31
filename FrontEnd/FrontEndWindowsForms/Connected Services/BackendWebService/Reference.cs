@@ -182,172 +182,6 @@ namespace FrontEndWindowsForms.BackendWebService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CreditosModel", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class CreditosModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int IdCreditoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        private int MontoField;
-        
-        private int PlazoField;
-        
-        private float TeaField;
-        
-        private float TnmField;
-        
-        private int TotalInteresField;
-        
-        private int TotalMontoInteresField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int IdCredito {
-            get {
-                return this.IdCreditoField;
-            }
-            set {
-                if ((this.IdCreditoField.Equals(value) != true)) {
-                    this.IdCreditoField = value;
-                    this.RaisePropertyChanged("IdCredito");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int Monto {
-            get {
-                return this.MontoField;
-            }
-            set {
-                if ((this.MontoField.Equals(value) != true)) {
-                    this.MontoField = value;
-                    this.RaisePropertyChanged("Monto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int Plazo {
-            get {
-                return this.PlazoField;
-            }
-            set {
-                if ((this.PlazoField.Equals(value) != true)) {
-                    this.PlazoField = value;
-                    this.RaisePropertyChanged("Plazo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public float Tea {
-            get {
-                return this.TeaField;
-            }
-            set {
-                if ((this.TeaField.Equals(value) != true)) {
-                    this.TeaField = value;
-                    this.RaisePropertyChanged("Tea");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public float Tnm {
-            get {
-                return this.TnmField;
-            }
-            set {
-                if ((this.TnmField.Equals(value) != true)) {
-                    this.TnmField = value;
-                    this.RaisePropertyChanged("Tnm");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
-        public int TotalInteres {
-            get {
-                return this.TotalInteresField;
-            }
-            set {
-                if ((this.TotalInteresField.Equals(value) != true)) {
-                    this.TotalInteresField = value;
-                    this.RaisePropertyChanged("TotalInteres");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public int TotalMontoInteres {
-            get {
-                return this.TotalMontoInteresField;
-            }
-            set {
-                if ((this.TotalMontoInteresField.Equals(value) != true)) {
-                    this.TotalMontoInteresField = value;
-                    this.RaisePropertyChanged("TotalMontoInteres");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public string Error {
-            get {
-                return this.ErrorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorField, value) != true)) {
-                    this.ErrorField = value;
-                    this.RaisePropertyChanged("Error");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BackendWebService.WebServiceSoap")]
     public interface WebServiceSoap {
@@ -1000,12 +834,12 @@ namespace FrontEndWindowsForms.BackendWebService {
     public partial class ConsultarProductosPorClienteResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FrontEndWindowsForms.BackendWebService.CreditosModel[] ConsultarProductosPorClienteResult;
+        public string ConsultarProductosPorClienteResult;
         
         public ConsultarProductosPorClienteResponseBody() {
         }
         
-        public ConsultarProductosPorClienteResponseBody(FrontEndWindowsForms.BackendWebService.CreditosModel[] ConsultarProductosPorClienteResult) {
+        public ConsultarProductosPorClienteResponseBody(string ConsultarProductosPorClienteResult) {
             this.ConsultarProductosPorClienteResult = ConsultarProductosPorClienteResult;
         }
     }
@@ -1247,7 +1081,7 @@ namespace FrontEndWindowsForms.BackendWebService {
             return base.Channel.ConsultarProductosPorCliente(request);
         }
         
-        public FrontEndWindowsForms.BackendWebService.CreditosModel[] ConsultarProductosPorCliente(string cedula) {
+        public string ConsultarProductosPorCliente(string cedula) {
             FrontEndWindowsForms.BackendWebService.ConsultarProductosPorClienteRequest inValue = new FrontEndWindowsForms.BackendWebService.ConsultarProductosPorClienteRequest();
             inValue.Body = new FrontEndWindowsForms.BackendWebService.ConsultarProductosPorClienteRequestBody();
             inValue.Body.cedula = cedula;

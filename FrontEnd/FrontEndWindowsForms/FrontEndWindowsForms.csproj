@@ -98,9 +98,6 @@
     <None Include="Connected Services\BackendWebService\FrontEndWindowsForms.BackendWebService.ConsultarProductosPorClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\BackendWebService\FrontEndWindowsForms.BackendWebService.CreditosModel.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\BackendWebService\FrontEndWindowsForms.BackendWebService.EliminarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

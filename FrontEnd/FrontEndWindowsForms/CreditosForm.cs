@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace FrontEndWindowsForms
 {
@@ -51,14 +52,15 @@ namespace FrontEndWindowsForms
         private void OcultarCards() {
             CreditCard.Visible = false;
             CreditCardListar.Visible = false;
+
         }
 
         private void btnViabilidadCliente_Click(object sender, EventArgs e)
         {
             string cedula, response, mensaje;
             cedula = txtCreditosCedula.Text.ToString();
-            OcultarCards();
             CreditCard.Visible = true;
+            CreditCardListar.Visible = false;
 
             if (cedula != "") {
                 btnCreditosDesembolsar.Enabled = false;
@@ -98,8 +100,6 @@ namespace FrontEndWindowsForms
                 mensaje = "Por favor ingrese una cédula";
                 txtCreditosCedula.LineIdleColor = Color.FromArgb(235, 26, 45);
             }
-
-
             this.MostrarMensaje(mensaje);
         }
 
@@ -132,10 +132,39 @@ namespace FrontEndWindowsForms
             }
         }
         public void btnCreditosListar_Click(object sender, EventArgs e) {
+
+            string mensaje, response, cedula;
             OcultarCards();
             CreditCard.Visible = true;
             CreditCardListar.Visible = true;
-        }
 
+            cedula = txtCreditosCedulaListar.Text.ToString();
+
+            if (cedula != "")
+            {
+                BackendWebService.WebServiceSoapClient backend = new BackendWebService.WebServiceSoapClient();
+                response = backend.ConsultarProductosPorCliente(cedula);
+
+                JArray jArray = JArray.Parse(response);
+
+                JArray parsedArray = JArray.Parse(response);
+                foreach (JObject parsedObject in parsedArray.Children<JObject>())
+                {
+                    var myList = new List<string>();
+
+                    foreach (JProperty parsedProperty in parsedObject.Properties())
+                    {
+                        myList.Add(parsedProperty.Value.ToString());
+                    }
+                    dtgCreditList.Rows.Add(myList.ToArray());
+                }
+                mensaje = "Consulta ejecutada Correctamente";
+            }
+            else {
+                mensaje = "Por favor ingrese una cédula";
+                txtCreditosCedulaListar.LineIdleColor = Color.FromArgb(235, 26, 45);
+            }
+            this.MostrarMensaje(mensaje);
+        }
     }
 }
