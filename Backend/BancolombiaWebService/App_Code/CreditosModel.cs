@@ -30,7 +30,7 @@ public class CreditosModel
         this.sqlCommand = new SqlCommand();
     }
 
-    public bool InsertarCredito(string producto, int plazo, int monto, int idCliente)
+    public bool InsertarCredito(string producto, int plazo, int monto, string cedula)
     {
 
         float tea = this.GetTEA(producto);
@@ -47,8 +47,9 @@ public class CreditosModel
         sqlCommand.Parameters.AddWithValue("@Anualidad", anualidad); 
         sqlCommand.Parameters.AddWithValue("@Tnm", tnm); 
         sqlCommand.Parameters.AddWithValue("@Tea", tea); 
-        sqlCommand.Parameters.AddWithValue("@IdCliente", idCliente); 
-        sqlCommand.Parameters.AddWithValue("@TotalMontoIntereses", totalMontoIntereses); 
+        sqlCommand.Parameters.AddWithValue("@Cedula", cedula); 
+        sqlCommand.Parameters.AddWithValue("@TotalMontoIntereses", totalMontoIntereses);
+        sqlCommand.Parameters.AddWithValue("@Nombre", this.TrasnformProductName(producto));
 
         bool consultaExitosa = conexionSQL.ExecuteStoreProcedure(sqlCommand);
         sqlCommand = null;
@@ -122,6 +123,27 @@ public class CreditosModel
                 break;
         }
         return tea;
+    }
+
+    private string TrasnformProductName(string producto)
+    {
+        string name;
+        switch (producto)
+        {
+            case "libreInversion":
+                name = "Libre Inversión";
+                break;
+            case "vehiculo":
+                name = "Vehículo";
+                break;
+            case "vivienda":
+                name = "Vivienda";
+                break;
+            default:
+                name = "";
+                break;
+        }
+        return name;
     }
 
     private float GetTNM(float tnm) {

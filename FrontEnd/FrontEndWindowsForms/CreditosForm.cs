@@ -12,9 +12,14 @@ namespace FrontEndWindowsForms
 {
     public partial class CreditosForm : Form
     {
+        protected string cedula;
         public CreditosForm()
         {
             InitializeComponent();
+            btnCreditosDesembolsar.Enabled = false;
+            dropCreditosProducto.Hide();
+            txtCreditosMonto.Hide();
+            txtCreditosPlazo.Hide();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -33,6 +38,76 @@ namespace FrontEndWindowsForms
         {
             lblUserMessage.Text = "";
             btnCloseUserMessage.Hide();
+        }
+
+        private void MostrarMensaje(string mensaje)
+        {
+            lblUserMessage.Text = mensaje;
+            btnCloseUserMessage.Show();
+        }
+
+        private void btnViabilidadCliente_Click(object sender, EventArgs e)
+        {
+            string cedula, response, mensaje;
+            cedula = txtCreditosCedula.Text.ToString();
+
+            btnCreditosDesembolsar.Enabled = false;
+            dropCreditosProducto.Hide();
+            txtCreditosMonto.Hide();
+            txtCreditosPlazo.Hide();
+
+            BackendWebService.WebServiceSoapClient backend = new BackendWebService.WebServiceSoapClient();
+            response = backend.ValidarViabilidadCredito(cedula);
+
+            switch (response) {
+                case "flujoCajaNegativo":
+                    mensaje = "El cliente tiene flujo de caja negativo";
+                    break;
+                case "capacidadEndeudamiento":
+                    mensaje = "La capacidad de endeudamiento debe ser superior al 20%";
+                    break;
+                case "mayor15vecesSalario":
+                    mensaje = "Las deudas del cliente superan 15 veces su salario";
+                    break;
+                case "aprobado":
+                    mensaje = "El credito puede ser desembolsado, proceda a crearlo";
+                    btnCreditosDesembolsar.Enabled = true;
+                    dropCreditosProducto.Show();
+                    txtCreditosMonto.Show();
+                    txtCreditosPlazo.Show();
+                    this.cedula = cedula;
+                    break;
+                default:
+                    mensaje = response;
+                    break;
+            }
+            this.MostrarMensaje(mensaje);
+        }
+
+        private void btnCreditosDesembolsar_Click(object sender, EventArgs e)
+        {
+            string cedula, producto, response;
+            int monto, plazo;
+
+            cedula = this.cedula;
+            producto = dropCreditosProducto.selectedValue;
+            monto = Convert.ToInt32(txtCreditosMonto.Text.ToString());
+            plazo = Convert.ToInt32(txtCreditosPlazo.Text.ToString());
+
+            BackendWebService.WebServiceSoapClient backend = new BackendWebService.WebServiceSoapClient();
+            response = backend.InsertarCredito(producto, plazo, monto, cedula);
+
+            if (response == "creado")
+            {
+                this.MostrarMensaje("El crédito ha sido creado para el usuario: " + cedula);
+                btnCreditosDesembolsar.Enabled = false;
+                txtCreditosCedula.Text = "";
+                txtCreditosMonto.Text = "";
+                txtCreditosPlazo.Text = "";
+            }
+            else {
+                this.MostrarMensaje(response);
+            }
         }
     }
 }

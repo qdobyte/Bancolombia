@@ -50,10 +50,10 @@ use Bancolombia
 go
 
 /*
-DROP PROCEDURE eliminarUsuario; 
+DROP PROCEDURE eliminarCliente; 
 GO
 */
-create proc eliminarUsuario
+create proc eliminarCliente
 	@Cedula int
 As
 DELETE FROM Cliente
@@ -100,22 +100,31 @@ DROP PROCEDURE crearCredito;
 GO
 */  
 create proc crearCredito
+	@Cedula varchar(50),
 	@Plazo int,
 	@Monto int,
 	@TotalInteres int,
 	@Anualidad int,
 	@Tnm float,
 	@Tea float,
-	@IdCliente int,
-	@TotalMontoIntereses int
+	@TotalMontoIntereses int,
+	@Nombre varchar(50)
 
 As 
-	INSERT INTO Credito(plazo,monto,total_interes,anualidad,tnm,tea,id_cliente, total_monto_intereses)
-	VALUES (@Plazo,@Monto,@TotalInteres,@Anualidad,@Tnm,@Tea,@IdCliente, @TotalMontoIntereses); 
-	
+	DECLARE @IdCliente int;
+	SELECT @IdCliente = id_cliente FROM Cliente AS cli where cedula=@Cedula;
+	if (@IdCliente = NULL) 
+	BEGIN
+		select 'No existe el cliente' as error
+	END
+	else 
+	BEGIN
+		INSERT INTO Credito(plazo,monto,total_interes,anualidad,tnm,tea,id_cliente, total_monto_intereses, nombre)
+		VALUES (@Plazo,@Monto,@TotalInteres,@Anualidad,@Tnm,@Tea,@IdCliente, @TotalMontoIntereses, @Nombre); 
+	END
 go
 
-exec crearCredito 12,1500,10,15,20,15,10,2,1
+exec crearCredito 10879864860,12,1500,10,15,20,15,2,'Vehiculo'
 
 
 DROP PROC consultarProductosPorCliente;

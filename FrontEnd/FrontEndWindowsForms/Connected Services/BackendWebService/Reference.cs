@@ -894,17 +894,17 @@ namespace FrontEndWindowsForms.BackendWebService {
         [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
         public int monto;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public int idCliente;
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string cedula;
         
         public InsertarCreditoRequestBody() {
         }
         
-        public InsertarCreditoRequestBody(string producto, int plazo, int monto, int idCliente) {
+        public InsertarCreditoRequestBody(string producto, int plazo, int monto, string cedula) {
             this.producto = producto;
             this.plazo = plazo;
             this.monto = monto;
-            this.idCliente = idCliente;
+            this.cedula = cedula;
         }
     }
     
@@ -1216,13 +1216,13 @@ namespace FrontEndWindowsForms.BackendWebService {
             return base.Channel.InsertarCredito(request);
         }
         
-        public string InsertarCredito(string producto, int plazo, int monto, int idCliente) {
+        public string InsertarCredito(string producto, int plazo, int monto, string cedula) {
             FrontEndWindowsForms.BackendWebService.InsertarCreditoRequest inValue = new FrontEndWindowsForms.BackendWebService.InsertarCreditoRequest();
             inValue.Body = new FrontEndWindowsForms.BackendWebService.InsertarCreditoRequestBody();
             inValue.Body.producto = producto;
             inValue.Body.plazo = plazo;
             inValue.Body.monto = monto;
-            inValue.Body.idCliente = idCliente;
+            inValue.Body.cedula = cedula;
             FrontEndWindowsForms.BackendWebService.InsertarCreditoResponse retVal = ((FrontEndWindowsForms.BackendWebService.WebServiceSoap)(this)).InsertarCredito(inValue);
             return retVal.Body.InsertarCreditoResult;
         }
@@ -1232,13 +1232,13 @@ namespace FrontEndWindowsForms.BackendWebService {
             return base.Channel.InsertarCreditoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEndWindowsForms.BackendWebService.InsertarCreditoResponse> InsertarCreditoAsync(string producto, int plazo, int monto, int idCliente) {
+        public System.Threading.Tasks.Task<FrontEndWindowsForms.BackendWebService.InsertarCreditoResponse> InsertarCreditoAsync(string producto, int plazo, int monto, string cedula) {
             FrontEndWindowsForms.BackendWebService.InsertarCreditoRequest inValue = new FrontEndWindowsForms.BackendWebService.InsertarCreditoRequest();
             inValue.Body = new FrontEndWindowsForms.BackendWebService.InsertarCreditoRequestBody();
             inValue.Body.producto = producto;
             inValue.Body.plazo = plazo;
             inValue.Body.monto = monto;
-            inValue.Body.idCliente = idCliente;
+            inValue.Body.cedula = cedula;
             return ((FrontEndWindowsForms.BackendWebService.WebServiceSoap)(this)).InsertarCreditoAsync(inValue);
         }
         

@@ -71,20 +71,14 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
-            this.txtClientCedula = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtClientIngresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtClientPasivos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtClientNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblNombre = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtClientEgresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtClientDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtClientScoring = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblDireccion = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtClientDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtClientEgresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtClientNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtClientPasivos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtClientIngresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtClientCedula = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.header.SuspendLayout();
             this.clientNavbar.SuspendLayout();
             this.navbar.SuspendLayout();
@@ -95,6 +89,7 @@
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).BeginInit();
             this.bunifuCards4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -704,19 +699,13 @@
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = true;
             this.bunifuCards4.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.bunifuCards4.Controls.Add(this.bunifuCustomLabel15);
-            this.bunifuCards4.Controls.Add(this.lblDireccion);
-            this.bunifuCards4.Controls.Add(this.bunifuCustomLabel12);
+            this.bunifuCards4.Controls.Add(this.bunifuImageButton1);
             this.bunifuCards4.Controls.Add(this.txtClientScoring);
             this.bunifuCards4.Controls.Add(this.txtClientDireccion);
             this.bunifuCards4.Controls.Add(this.txtClientEgresos);
-            this.bunifuCards4.Controls.Add(this.bunifuCustomLabel13);
-            this.bunifuCards4.Controls.Add(this.lblNombre);
-            this.bunifuCards4.Controls.Add(this.bunifuCustomLabel11);
             this.bunifuCards4.Controls.Add(this.txtClientNombre);
             this.bunifuCards4.Controls.Add(this.txtClientPasivos);
             this.bunifuCards4.Controls.Add(this.txtClientIngresos);
-            this.bunifuCards4.Controls.Add(this.bunifuCustomLabel6);
             this.bunifuCards4.Controls.Add(this.txtClientCedula);
             this.bunifuCards4.LeftSahddow = false;
             this.bunifuCards4.Location = new System.Drawing.Point(206, 78);
@@ -726,13 +715,127 @@
             this.bunifuCards4.Size = new System.Drawing.Size(690, 311);
             this.bunifuCards4.TabIndex = 2;
             // 
+            // txtClientScoring
+            // 
+            this.txtClientScoring.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClientScoring.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientScoring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtClientScoring.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientScoring.HintText = "Scoring";
+            this.txtClientScoring.isPassword = false;
+            this.txtClientScoring.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtClientScoring.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientScoring.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientScoring.LineThickness = 3;
+            this.txtClientScoring.Location = new System.Drawing.Point(390, 227);
+            this.txtClientScoring.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientScoring.Name = "txtClientScoring";
+            this.txtClientScoring.Size = new System.Drawing.Size(244, 32);
+            this.txtClientScoring.TabIndex = 1;
+            this.txtClientScoring.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtClientDireccion
+            // 
+            this.txtClientDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClientDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtClientDireccion.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientDireccion.HintText = "Dirección";
+            this.txtClientDireccion.isPassword = false;
+            this.txtClientDireccion.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtClientDireccion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientDireccion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientDireccion.LineThickness = 3;
+            this.txtClientDireccion.Location = new System.Drawing.Point(390, 115);
+            this.txtClientDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientDireccion.Name = "txtClientDireccion";
+            this.txtClientDireccion.Size = new System.Drawing.Size(244, 32);
+            this.txtClientDireccion.TabIndex = 1;
+            this.txtClientDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtClientEgresos
+            // 
+            this.txtClientEgresos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClientEgresos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtClientEgresos.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientEgresos.HintText = "Egresos";
+            this.txtClientEgresos.isPassword = false;
+            this.txtClientEgresos.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtClientEgresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientEgresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientEgresos.LineThickness = 3;
+            this.txtClientEgresos.Location = new System.Drawing.Point(390, 171);
+            this.txtClientEgresos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientEgresos.Name = "txtClientEgresos";
+            this.txtClientEgresos.Size = new System.Drawing.Size(244, 32);
+            this.txtClientEgresos.TabIndex = 1;
+            this.txtClientEgresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtClientNombre
+            // 
+            this.txtClientNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClientNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtClientNombre.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientNombre.HintText = "Nombre";
+            this.txtClientNombre.isPassword = false;
+            this.txtClientNombre.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtClientNombre.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientNombre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientNombre.LineThickness = 3;
+            this.txtClientNombre.Location = new System.Drawing.Point(54, 115);
+            this.txtClientNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientNombre.Name = "txtClientNombre";
+            this.txtClientNombre.Size = new System.Drawing.Size(244, 32);
+            this.txtClientNombre.TabIndex = 1;
+            this.txtClientNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtClientPasivos
+            // 
+            this.txtClientPasivos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClientPasivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientPasivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtClientPasivos.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientPasivos.HintText = "Pasivos";
+            this.txtClientPasivos.isPassword = false;
+            this.txtClientPasivos.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtClientPasivos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientPasivos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientPasivos.LineThickness = 3;
+            this.txtClientPasivos.Location = new System.Drawing.Point(54, 227);
+            this.txtClientPasivos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientPasivos.Name = "txtClientPasivos";
+            this.txtClientPasivos.Size = new System.Drawing.Size(244, 32);
+            this.txtClientPasivos.TabIndex = 1;
+            this.txtClientPasivos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtClientIngresos
+            // 
+            this.txtClientIngresos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClientIngresos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientIngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtClientIngresos.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientIngresos.HintText = "Ingresos";
+            this.txtClientIngresos.isPassword = false;
+            this.txtClientIngresos.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtClientIngresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientIngresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtClientIngresos.LineThickness = 3;
+            this.txtClientIngresos.Location = new System.Drawing.Point(54, 171);
+            this.txtClientIngresos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientIngresos.Name = "txtClientIngresos";
+            this.txtClientIngresos.Size = new System.Drawing.Size(244, 32);
+            this.txtClientIngresos.TabIndex = 1;
+            this.txtClientIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // txtClientCedula
             // 
             this.txtClientCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtClientCedula.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientCedula.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientCedula.HintText = "";
+            this.txtClientCedula.HintForeColor = System.Drawing.Color.Gray;
+            this.txtClientCedula.HintText = "Cédula";
             this.txtClientCedula.isPassword = false;
             this.txtClientCedula.LineFocusedColor = System.Drawing.Color.Gray;
             this.txtClientCedula.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
@@ -745,184 +848,20 @@
             this.txtClientCedula.TabIndex = 1;
             this.txtClientCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuCustomLabel6
+            // bunifuImageButton1
             // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(146, 40);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(40, 13);
-            this.bunifuCustomLabel6.TabIndex = 2;
-            this.bunifuCustomLabel6.Text = "Cédula";
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(175, 29);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(33, 35);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 3;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
-            // txtClientIngresos
-            // 
-            this.txtClientIngresos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClientIngresos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientIngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientIngresos.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientIngresos.HintText = "";
-            this.txtClientIngresos.isPassword = false;
-            this.txtClientIngresos.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txtClientIngresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientIngresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientIngresos.LineThickness = 3;
-            this.txtClientIngresos.Location = new System.Drawing.Point(83, 171);
-            this.txtClientIngresos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClientIngresos.Name = "txtClientIngresos";
-            this.txtClientIngresos.Size = new System.Drawing.Size(244, 32);
-            this.txtClientIngresos.TabIndex = 1;
-            this.txtClientIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtClientPasivos
-            // 
-            this.txtClientPasivos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClientPasivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientPasivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientPasivos.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientPasivos.HintText = "";
-            this.txtClientPasivos.isPassword = false;
-            this.txtClientPasivos.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txtClientPasivos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientPasivos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientPasivos.LineThickness = 3;
-            this.txtClientPasivos.Location = new System.Drawing.Point(83, 227);
-            this.txtClientPasivos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClientPasivos.Name = "txtClientPasivos";
-            this.txtClientPasivos.Size = new System.Drawing.Size(244, 32);
-            this.txtClientPasivos.TabIndex = 1;
-            this.txtClientPasivos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtClientNombre
-            // 
-            this.txtClientNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClientNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientNombre.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientNombre.HintText = "";
-            this.txtClientNombre.isPassword = false;
-            this.txtClientNombre.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txtClientNombre.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientNombre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientNombre.LineThickness = 3;
-            this.txtClientNombre.Location = new System.Drawing.Point(83, 115);
-            this.txtClientNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClientNombre.Name = "txtClientNombre";
-            this.txtClientNombre.Size = new System.Drawing.Size(244, 32);
-            this.txtClientNombre.TabIndex = 1;
-            this.txtClientNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel11
-            // 
-            this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(14, 179);
-            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(47, 13);
-            this.bunifuCustomLabel11.TabIndex = 2;
-            this.bunifuCustomLabel11.Text = "Ingresos";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(14, 124);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // bunifuCustomLabel13
-            // 
-            this.bunifuCustomLabel13.AutoSize = true;
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(14, 236);
-            this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(44, 13);
-            this.bunifuCustomLabel13.TabIndex = 2;
-            this.bunifuCustomLabel13.Text = "Pasivos";
-            // 
-            // txtClientEgresos
-            // 
-            this.txtClientEgresos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClientEgresos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientEgresos.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientEgresos.HintText = "";
-            this.txtClientEgresos.isPassword = false;
-            this.txtClientEgresos.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txtClientEgresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientEgresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientEgresos.LineThickness = 3;
-            this.txtClientEgresos.Location = new System.Drawing.Point(419, 171);
-            this.txtClientEgresos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClientEgresos.Name = "txtClientEgresos";
-            this.txtClientEgresos.Size = new System.Drawing.Size(244, 32);
-            this.txtClientEgresos.TabIndex = 1;
-            this.txtClientEgresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtClientDireccion
-            // 
-            this.txtClientDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClientDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientDireccion.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientDireccion.HintText = "";
-            this.txtClientDireccion.isPassword = false;
-            this.txtClientDireccion.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txtClientDireccion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientDireccion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientDireccion.LineThickness = 3;
-            this.txtClientDireccion.Location = new System.Drawing.Point(419, 115);
-            this.txtClientDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClientDireccion.Name = "txtClientDireccion";
-            this.txtClientDireccion.Size = new System.Drawing.Size(244, 32);
-            this.txtClientDireccion.TabIndex = 1;
-            this.txtClientDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtClientScoring
-            // 
-            this.txtClientScoring.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClientScoring.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientScoring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtClientScoring.HintForeColor = System.Drawing.Color.Empty;
-            this.txtClientScoring.HintText = "";
-            this.txtClientScoring.isPassword = false;
-            this.txtClientScoring.LineFocusedColor = System.Drawing.Color.Gray;
-            this.txtClientScoring.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientScoring.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.txtClientScoring.LineThickness = 3;
-            this.txtClientScoring.Location = new System.Drawing.Point(419, 227);
-            this.txtClientScoring.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClientScoring.Name = "txtClientScoring";
-            this.txtClientScoring.Size = new System.Drawing.Size(244, 32);
-            this.txtClientScoring.TabIndex = 1;
-            this.txtClientScoring.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel12
-            // 
-            this.bunifuCustomLabel12.AutoSize = true;
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(350, 179);
-            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(45, 13);
-            this.bunifuCustomLabel12.TabIndex = 2;
-            this.bunifuCustomLabel12.Text = "Egresos";
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(350, 124);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
-            this.lblDireccion.TabIndex = 2;
-            this.lblDireccion.Text = "Direccion";
-            // 
-            // bunifuCustomLabel15
-            // 
-            this.bunifuCustomLabel15.AutoSize = true;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(350, 236);
-            this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(43, 13);
-            this.bunifuCustomLabel15.TabIndex = 2;
-            this.bunifuCustomLabel15.Text = "Scoring";
-            // 
-            // FrontWindow
+            // ClientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -933,8 +872,8 @@
             this.Controls.Add(this.footer);
             this.Controls.Add(this.navbar);
             this.Controls.Add(this.header);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FrontWindow";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "ClientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Creditos Bancolombia";
             this.header.ResumeLayout(false);
@@ -948,7 +887,7 @@
             this.bunifuCards1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).EndInit();
             this.bunifuCards4.ResumeLayout(false);
-            this.bunifuCards4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -995,20 +934,14 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Panel logoPanel;
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblDireccion;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientScoring;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientDireccion;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientEgresos;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblNombre;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientNombre;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientPasivos;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientIngresos;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClientCedula;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }
 

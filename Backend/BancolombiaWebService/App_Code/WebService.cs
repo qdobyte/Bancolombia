@@ -95,12 +95,12 @@ public class WebService : System.Web.Services.WebService
 
     #region Credit Methods
     [WebMethod]
-    public string InsertarCredito(string producto, int plazo, int monto, int idCliente)
+    public string InsertarCredito(string producto, int plazo, int monto, string cedula)
     {
         CreditosModel creditoModel = new CreditosModel();
-        if (creditoModel.InsertarCredito(producto, plazo, monto, idCliente))
+        if (creditoModel.InsertarCredito(producto, plazo, monto, cedula))
         {
-            return "Credito creado correctamente";
+            return "creado";
         }
         else {
             return creditoModel.Error;

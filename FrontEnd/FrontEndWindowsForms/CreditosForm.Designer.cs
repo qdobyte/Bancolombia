@@ -29,26 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreditosForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CreditPanelHeader = new System.Windows.Forms.Panel();
             this.clientNavbar = new System.Windows.Forms.Panel();
-            this.btnConsultarCliente = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEliminarCliente = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnInsertarCliente = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnViabilidadCliente = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCreditosDesembolsar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.CreditCard = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anualidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tnm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMontoInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtCreditosMonto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCreditosPlazo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCreditosCedula = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.CreditPanelNavbar = new System.Windows.Forms.Panel();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
             this.btnSalir = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -58,10 +48,11 @@
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.btnCloseUserMessage = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblUserMessage = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dropCreditosProducto = new Bunifu.Framework.UI.BunifuDropdown();
             this.CreditPanelHeader.SuspendLayout();
             this.clientNavbar.SuspendLayout();
             this.CreditCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.CreditPanelNavbar.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
             this.CreditPanelFooter.SuspendLayout();
@@ -81,115 +72,83 @@
             // 
             // clientNavbar
             // 
-            this.clientNavbar.Controls.Add(this.btnConsultarCliente);
-            this.clientNavbar.Controls.Add(this.btnEliminarCliente);
-            this.clientNavbar.Controls.Add(this.btnInsertarCliente);
-            this.clientNavbar.Location = new System.Drawing.Point(298, 12);
+            this.clientNavbar.Controls.Add(this.btnViabilidadCliente);
+            this.clientNavbar.Controls.Add(this.btnCreditosDesembolsar);
+            this.clientNavbar.Location = new System.Drawing.Point(313, 12);
             this.clientNavbar.Name = "clientNavbar";
-            this.clientNavbar.Size = new System.Drawing.Size(470, 60);
+            this.clientNavbar.Size = new System.Drawing.Size(441, 60);
             this.clientNavbar.TabIndex = 7;
             // 
-            // btnConsultarCliente
+            // btnViabilidadCliente
             // 
-            this.btnConsultarCliente.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnConsultarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
-            this.btnConsultarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultarCliente.BorderRadius = 0;
-            this.btnConsultarCliente.ButtonText = "Consultar";
-            this.btnConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarCliente.DisabledColor = System.Drawing.Color.Gray;
-            this.btnConsultarCliente.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnConsultarCliente.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnConsultarCliente.Iconimage")));
-            this.btnConsultarCliente.Iconimage_right = null;
-            this.btnConsultarCliente.Iconimage_right_Selected = null;
-            this.btnConsultarCliente.Iconimage_Selected = null;
-            this.btnConsultarCliente.IconMarginLeft = 0;
-            this.btnConsultarCliente.IconMarginRight = 0;
-            this.btnConsultarCliente.IconRightVisible = true;
-            this.btnConsultarCliente.IconRightZoom = 0D;
-            this.btnConsultarCliente.IconVisible = true;
-            this.btnConsultarCliente.IconZoom = 90D;
-            this.btnConsultarCliente.IsTab = false;
-            this.btnConsultarCliente.Location = new System.Drawing.Point(45, 3);
-            this.btnConsultarCliente.Name = "btnConsultarCliente";
-            this.btnConsultarCliente.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
-            this.btnConsultarCliente.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(168)))));
-            this.btnConsultarCliente.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnConsultarCliente.selected = false;
-            this.btnConsultarCliente.Size = new System.Drawing.Size(122, 53);
-            this.btnConsultarCliente.TabIndex = 5;
-            this.btnConsultarCliente.Text = "Consultar";
-            this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConsultarCliente.Textcolor = System.Drawing.Color.White;
-            this.btnConsultarCliente.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViabilidadCliente.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnViabilidadCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
+            this.btnViabilidadCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViabilidadCliente.BorderRadius = 0;
+            this.btnViabilidadCliente.ButtonText = "Verificar Viabilidad";
+            this.btnViabilidadCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViabilidadCliente.DisabledColor = System.Drawing.Color.Gray;
+            this.btnViabilidadCliente.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnViabilidadCliente.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnViabilidadCliente.Iconimage")));
+            this.btnViabilidadCliente.Iconimage_right = null;
+            this.btnViabilidadCliente.Iconimage_right_Selected = null;
+            this.btnViabilidadCliente.Iconimage_Selected = null;
+            this.btnViabilidadCliente.IconMarginLeft = 0;
+            this.btnViabilidadCliente.IconMarginRight = 0;
+            this.btnViabilidadCliente.IconRightVisible = true;
+            this.btnViabilidadCliente.IconRightZoom = 0D;
+            this.btnViabilidadCliente.IconVisible = true;
+            this.btnViabilidadCliente.IconZoom = 90D;
+            this.btnViabilidadCliente.IsTab = false;
+            this.btnViabilidadCliente.Location = new System.Drawing.Point(57, 3);
+            this.btnViabilidadCliente.Name = "btnViabilidadCliente";
+            this.btnViabilidadCliente.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
+            this.btnViabilidadCliente.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(168)))));
+            this.btnViabilidadCliente.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnViabilidadCliente.selected = false;
+            this.btnViabilidadCliente.Size = new System.Drawing.Size(153, 53);
+            this.btnViabilidadCliente.TabIndex = 5;
+            this.btnViabilidadCliente.Text = "Verificar Viabilidad";
+            this.btnViabilidadCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnViabilidadCliente.Textcolor = System.Drawing.Color.White;
+            this.btnViabilidadCliente.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViabilidadCliente.Click += new System.EventHandler(this.btnViabilidadCliente_Click);
             // 
-            // btnEliminarCliente
+            // btnCreditosDesembolsar
             // 
-            this.btnEliminarCliente.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnEliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
-            this.btnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminarCliente.BorderRadius = 0;
-            this.btnEliminarCliente.ButtonText = "Eliminar";
-            this.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCliente.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEliminarCliente.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEliminarCliente.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEliminarCliente.Iconimage")));
-            this.btnEliminarCliente.Iconimage_right = null;
-            this.btnEliminarCliente.Iconimage_right_Selected = null;
-            this.btnEliminarCliente.Iconimage_Selected = null;
-            this.btnEliminarCliente.IconMarginLeft = 0;
-            this.btnEliminarCliente.IconMarginRight = 0;
-            this.btnEliminarCliente.IconRightVisible = true;
-            this.btnEliminarCliente.IconRightZoom = 0D;
-            this.btnEliminarCliente.IconVisible = true;
-            this.btnEliminarCliente.IconZoom = 90D;
-            this.btnEliminarCliente.IsTab = false;
-            this.btnEliminarCliente.Location = new System.Drawing.Point(173, 3);
-            this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
-            this.btnEliminarCliente.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(168)))));
-            this.btnEliminarCliente.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEliminarCliente.selected = false;
-            this.btnEliminarCliente.Size = new System.Drawing.Size(122, 53);
-            this.btnEliminarCliente.TabIndex = 4;
-            this.btnEliminarCliente.Text = "Eliminar";
-            this.btnEliminarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEliminarCliente.Textcolor = System.Drawing.Color.White;
-            this.btnEliminarCliente.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnInsertarCliente
-            // 
-            this.btnInsertarCliente.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnInsertarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
-            this.btnInsertarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInsertarCliente.BorderRadius = 0;
-            this.btnInsertarCliente.ButtonText = "Insertar";
-            this.btnInsertarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInsertarCliente.DisabledColor = System.Drawing.Color.Gray;
-            this.btnInsertarCliente.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnInsertarCliente.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnInsertarCliente.Iconimage")));
-            this.btnInsertarCliente.Iconimage_right = null;
-            this.btnInsertarCliente.Iconimage_right_Selected = null;
-            this.btnInsertarCliente.Iconimage_Selected = null;
-            this.btnInsertarCliente.IconMarginLeft = 0;
-            this.btnInsertarCliente.IconMarginRight = 0;
-            this.btnInsertarCliente.IconRightVisible = true;
-            this.btnInsertarCliente.IconRightZoom = 0D;
-            this.btnInsertarCliente.IconVisible = true;
-            this.btnInsertarCliente.IconZoom = 90D;
-            this.btnInsertarCliente.IsTab = false;
-            this.btnInsertarCliente.Location = new System.Drawing.Point(300, 3);
-            this.btnInsertarCliente.Name = "btnInsertarCliente";
-            this.btnInsertarCliente.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
-            this.btnInsertarCliente.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(168)))));
-            this.btnInsertarCliente.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnInsertarCliente.selected = false;
-            this.btnInsertarCliente.Size = new System.Drawing.Size(122, 53);
-            this.btnInsertarCliente.TabIndex = 3;
-            this.btnInsertarCliente.Text = "Insertar";
-            this.btnInsertarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnInsertarCliente.Textcolor = System.Drawing.Color.White;
-            this.btnInsertarCliente.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreditosDesembolsar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnCreditosDesembolsar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
+            this.btnCreditosDesembolsar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCreditosDesembolsar.BorderRadius = 0;
+            this.btnCreditosDesembolsar.ButtonText = "Desembolsar Crédito";
+            this.btnCreditosDesembolsar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreditosDesembolsar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCreditosDesembolsar.Enabled = false;
+            this.btnCreditosDesembolsar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCreditosDesembolsar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCreditosDesembolsar.Iconimage")));
+            this.btnCreditosDesembolsar.Iconimage_right = null;
+            this.btnCreditosDesembolsar.Iconimage_right_Selected = null;
+            this.btnCreditosDesembolsar.Iconimage_Selected = null;
+            this.btnCreditosDesembolsar.IconMarginLeft = 0;
+            this.btnCreditosDesembolsar.IconMarginRight = 0;
+            this.btnCreditosDesembolsar.IconRightVisible = true;
+            this.btnCreditosDesembolsar.IconRightZoom = 0D;
+            this.btnCreditosDesembolsar.IconVisible = true;
+            this.btnCreditosDesembolsar.IconZoom = 90D;
+            this.btnCreditosDesembolsar.IsTab = false;
+            this.btnCreditosDesembolsar.Location = new System.Drawing.Point(232, 3);
+            this.btnCreditosDesembolsar.Name = "btnCreditosDesembolsar";
+            this.btnCreditosDesembolsar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(143)))), ((int)(((byte)(185)))));
+            this.btnCreditosDesembolsar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(168)))));
+            this.btnCreditosDesembolsar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCreditosDesembolsar.selected = false;
+            this.btnCreditosDesembolsar.Size = new System.Drawing.Size(153, 53);
+            this.btnCreditosDesembolsar.TabIndex = 4;
+            this.btnCreditosDesembolsar.Text = "Desembolsar Crédito";
+            this.btnCreditosDesembolsar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreditosDesembolsar.Textcolor = System.Drawing.Color.White;
+            this.btnCreditosDesembolsar.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreditosDesembolsar.Click += new System.EventHandler(this.btnCreditosDesembolsar_Click);
             // 
             // logoPanel
             // 
@@ -201,13 +160,18 @@
             // 
             // CreditCard
             // 
+            this.CreditCard.AccessibleDescription = "Producto";
+            this.CreditCard.AllowDrop = true;
             this.CreditCard.BackColor = System.Drawing.Color.White;
             this.CreditCard.BorderRadius = 5;
             this.CreditCard.BottomSahddow = true;
             this.CreditCard.color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.CreditCard.Controls.Add(this.bunifuCustomDataGrid1);
-            this.CreditCard.Controls.Add(this.bunifuCustomLabel14);
-            this.CreditCard.Controls.Add(this.bunifuMaterialTextbox7);
+            this.CreditCard.Controls.Add(this.dropCreditosProducto);
+            this.CreditCard.Controls.Add(this.bunifuImageButton1);
+            this.CreditCard.Controls.Add(this.txtCreditosMonto);
+            this.CreditCard.Controls.Add(this.txtCreditosPlazo);
+            this.CreditCard.Controls.Add(this.txtCreditosCedula);
+            this.CreditCard.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreditCard.LeftSahddow = false;
             this.CreditCard.Location = new System.Drawing.Point(206, 78);
             this.CreditCard.Name = "CreditCard";
@@ -216,108 +180,75 @@
             this.CreditCard.Size = new System.Drawing.Size(917, 464);
             this.CreditCard.TabIndex = 3;
             // 
-            // bunifuCustomDataGrid1
+            // bunifuImageButton1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.plazo,
-            this.monto,
-            this.totalInteres,
-            this.anualidad,
-            this.tnm,
-            this.tea,
-            this.totalMontoInteres});
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(20, 80);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(667, 207);
-            this.bunifuCustomDataGrid1.TabIndex = 3;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(175, 25);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(33, 35);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 2;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
-            // nombre
+            // txtCreditosMonto
             // 
-            this.nombre.HeaderText = "Nombre Producto";
-            this.nombre.Name = "nombre";
+            this.txtCreditosMonto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCreditosMonto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreditosMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCreditosMonto.HintForeColor = System.Drawing.Color.Gray;
+            this.txtCreditosMonto.HintText = "Monto";
+            this.txtCreditosMonto.isPassword = false;
+            this.txtCreditosMonto.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtCreditosMonto.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtCreditosMonto.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtCreditosMonto.LineThickness = 3;
+            this.txtCreditosMonto.Location = new System.Drawing.Point(279, 200);
+            this.txtCreditosMonto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCreditosMonto.Name = "txtCreditosMonto";
+            this.txtCreditosMonto.Size = new System.Drawing.Size(157, 33);
+            this.txtCreditosMonto.TabIndex = 3;
+            this.txtCreditosMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // plazo
+            // txtCreditosPlazo
             // 
-            this.plazo.HeaderText = "Plazo";
-            this.plazo.Name = "plazo";
+            this.txtCreditosPlazo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCreditosPlazo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreditosPlazo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCreditosPlazo.HintForeColor = System.Drawing.Color.Gray;
+            this.txtCreditosPlazo.HintText = "Plazo";
+            this.txtCreditosPlazo.isPassword = false;
+            this.txtCreditosPlazo.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtCreditosPlazo.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtCreditosPlazo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtCreditosPlazo.LineThickness = 3;
+            this.txtCreditosPlazo.Location = new System.Drawing.Point(279, 157);
+            this.txtCreditosPlazo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCreditosPlazo.Name = "txtCreditosPlazo";
+            this.txtCreditosPlazo.Size = new System.Drawing.Size(157, 33);
+            this.txtCreditosPlazo.TabIndex = 2;
+            this.txtCreditosPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // monto
+            // txtCreditosCedula
             // 
-            this.monto.HeaderText = "Monto";
-            this.monto.Name = "monto";
-            // 
-            // totalInteres
-            // 
-            this.totalInteres.HeaderText = "Total Interes";
-            this.totalInteres.Name = "totalInteres";
-            // 
-            // anualidad
-            // 
-            this.anualidad.HeaderText = "Anualidad";
-            this.anualidad.Name = "anualidad";
-            // 
-            // tnm
-            // 
-            this.tnm.HeaderText = "Tasa Nominal Mensual";
-            this.tnm.Name = "tnm";
-            // 
-            // tea
-            // 
-            this.tea.HeaderText = "Tasa Efectiva Anual";
-            this.tea.Name = "tea";
-            // 
-            // totalMontoInteres
-            // 
-            this.totalMontoInteres.HeaderText = "Total Monto mas Interés";
-            this.totalMontoInteres.Name = "totalMontoInteres";
-            // 
-            // bunifuCustomLabel14
-            // 
-            this.bunifuCustomLabel14.AutoSize = true;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(146, 40);
-            this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
-            this.bunifuCustomLabel14.Size = new System.Drawing.Size(40, 13);
-            this.bunifuCustomLabel14.TabIndex = 2;
-            this.bunifuCustomLabel14.Text = "Cédula";
-            // 
-            // bunifuMaterialTextbox7
-            // 
-            this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox7.HintText = "";
-            this.bunifuMaterialTextbox7.isPassword = false;
-            this.bunifuMaterialTextbox7.LineFocusedColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox7.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
-            this.bunifuMaterialTextbox7.LineThickness = 3;
-            this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(215, 29);
-            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
-            this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(286, 33);
-            this.bunifuMaterialTextbox7.TabIndex = 1;
-            this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCreditosCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCreditosCedula.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreditosCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCreditosCedula.HintForeColor = System.Drawing.Color.Gray;
+            this.txtCreditosCedula.HintText = "Cédula";
+            this.txtCreditosCedula.isPassword = false;
+            this.txtCreditosCedula.LineFocusedColor = System.Drawing.Color.Gray;
+            this.txtCreditosCedula.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtCreditosCedula.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.txtCreditosCedula.LineThickness = 3;
+            this.txtCreditosCedula.Location = new System.Drawing.Point(215, 29);
+            this.txtCreditosCedula.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCreditosCedula.Name = "txtCreditosCedula";
+            this.txtCreditosCedula.Size = new System.Drawing.Size(286, 33);
+            this.txtCreditosCedula.TabIndex = 0;
+            this.txtCreditosCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // CreditPanelNavbar
             // 
@@ -494,8 +425,27 @@
             this.lblUserMessage.Name = "lblUserMessage";
             this.lblUserMessage.Size = new System.Drawing.Size(596, 27);
             this.lblUserMessage.TabIndex = 1;
-            this.lblUserMessage.Text = "Bienvenido, aquí verá los mensajes del sistema";
+            this.lblUserMessage.Text = "Ingrese cédula y presione el botón Verificar Viabilidad";
             this.lblUserMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dropCreditosProducto
+            // 
+            this.dropCreditosProducto.BackColor = System.Drawing.Color.Transparent;
+            this.dropCreditosProducto.BorderRadius = 3;
+            this.dropCreditosProducto.DisabledColor = System.Drawing.Color.Gray;
+            this.dropCreditosProducto.ForeColor = System.Drawing.Color.White;
+            this.dropCreditosProducto.Items = new string[] {
+        "libreInversion",
+        "vehiculo",
+        "vivienda"};
+            this.dropCreditosProducto.Location = new System.Drawing.Point(216, 114);
+            this.dropCreditosProducto.Name = "dropCreditosProducto";
+            this.dropCreditosProducto.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.dropCreditosProducto.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(140)))));
+            this.dropCreditosProducto.selectedIndex = -1;
+            this.dropCreditosProducto.Size = new System.Drawing.Size(286, 35);
+            this.dropCreditosProducto.TabIndex = 4;
+            this.dropCreditosProducto.Tag = "Producto";
             // 
             // CreditosForm
             // 
@@ -507,14 +457,14 @@
             this.Controls.Add(this.CreditPanelNavbar);
             this.Controls.Add(this.CreditCard);
             this.Controls.Add(this.CreditPanelHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreditosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CreditosForm";
+            this.Text = "Menú Créditos";
             this.CreditPanelHeader.ResumeLayout(false);
             this.clientNavbar.ResumeLayout(false);
             this.CreditCard.ResumeLayout(false);
-            this.CreditCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.CreditPanelNavbar.ResumeLayout(false);
             this.bunifuCards3.ResumeLayout(false);
             this.CreditPanelFooter.ResumeLayout(false);
@@ -528,17 +478,7 @@
 
         private System.Windows.Forms.Panel CreditPanelHeader;
         private Bunifu.Framework.UI.BunifuCards CreditCard;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plazo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalInteres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn anualidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tnm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalMontoInteres;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCreditosCedula;
         private System.Windows.Forms.Panel CreditPanelNavbar;
         private System.Windows.Forms.Panel CreditPanelFooter;
         private System.Windows.Forms.Panel logoPanel;
@@ -550,8 +490,11 @@
         private Bunifu.Framework.UI.BunifuImageButton btnCloseUserMessage;
         private Bunifu.Framework.UI.BunifuCustomLabel lblUserMessage;
         private System.Windows.Forms.Panel clientNavbar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnConsultarCliente;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEliminarCliente;
-        private Bunifu.Framework.UI.BunifuFlatButton btnInsertarCliente;
+        private Bunifu.Framework.UI.BunifuFlatButton btnViabilidadCliente;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCreditosDesembolsar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCreditosMonto;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCreditosPlazo;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuDropdown dropCreditosProducto;
     }
 }
