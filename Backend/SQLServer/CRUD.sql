@@ -113,18 +113,11 @@ create proc crearCredito
 As 
 	DECLARE @IdCliente int;
 	SELECT @IdCliente = id_cliente FROM Cliente AS cli where cedula=@Cedula;
-	if (@IdCliente = NULL) 
-	BEGIN
-		select 'No existe el cliente' as error
-	END
-	else 
-	BEGIN
-		INSERT INTO Credito(plazo,monto,total_interes,anualidad,tnm,tea,id_cliente, total_monto_intereses, nombre)
-		VALUES (@Plazo,@Monto,@TotalInteres,@Anualidad,@Tnm,@Tea,@IdCliente, @TotalMontoIntereses, @Nombre); 
-	END
+	INSERT INTO Credito(plazo,monto,total_interes,anualidad,tnm,tea,id_cliente, total_monto_intereses, nombre)
+	VALUES (@Plazo,@Monto,@TotalInteres,@Anualidad,@Tnm,@Tea,@IdCliente, @TotalMontoIntereses, @Nombre); 
 go
 
-exec crearCredito 10879864860,12,1500,10,15,20,15,2,'Vehiculo'
+exec crearCredito 1087986486,12,1500,10,15,20,15,2,'Vehiculo'
 
 
 DROP PROC consultarProductosPorCliente;
