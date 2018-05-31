@@ -20,6 +20,8 @@ namespace FrontEndWindowsForms
             dropCreditosProducto.Hide();
             txtCreditosMonto.Hide();
             txtCreditosPlazo.Hide();
+            CreditCard.Visible = true;
+            CreditCardListar.Visible = false;
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -46,41 +48,58 @@ namespace FrontEndWindowsForms
             btnCloseUserMessage.Show();
         }
 
+        private void OcultarCards() {
+            CreditCard.Visible = false;
+            CreditCardListar.Visible = false;
+        }
+
         private void btnViabilidadCliente_Click(object sender, EventArgs e)
         {
             string cedula, response, mensaje;
             cedula = txtCreditosCedula.Text.ToString();
+            OcultarCards();
+            CreditCard.Visible = true;
 
-            btnCreditosDesembolsar.Enabled = false;
-            dropCreditosProducto.Hide();
-            txtCreditosMonto.Hide();
-            txtCreditosPlazo.Hide();
+            if (cedula != "") {
+                btnCreditosDesembolsar.Enabled = false;
+                dropCreditosProducto.Hide();
+                txtCreditosMonto.Hide();
+                txtCreditosPlazo.Hide();
 
-            BackendWebService.WebServiceSoapClient backend = new BackendWebService.WebServiceSoapClient();
-            response = backend.ValidarViabilidadCredito(cedula);
+                BackendWebService.WebServiceSoapClient backend = new BackendWebService.WebServiceSoapClient();
+                response = backend.ValidarViabilidadCredito(cedula);
 
-            switch (response) {
-                case "flujoCajaNegativo":
-                    mensaje = "El cliente tiene flujo de caja negativo";
-                    break;
-                case "capacidadEndeudamiento":
-                    mensaje = "La capacidad de endeudamiento debe ser superior al 20%";
-                    break;
-                case "mayor15vecesSalario":
-                    mensaje = "Las deudas del cliente superan 15 veces su salario";
-                    break;
-                case "aprobado":
-                    mensaje = "El credito puede ser desembolsado, proceda a crearlo";
-                    btnCreditosDesembolsar.Enabled = true;
-                    dropCreditosProducto.Show();
-                    txtCreditosMonto.Show();
-                    txtCreditosPlazo.Show();
-                    this.cedula = cedula;
-                    break;
-                default:
-                    mensaje = response;
-                    break;
+                switch (response)
+                {
+                    case "flujoCajaNegativo":
+                        mensaje = "El cliente tiene flujo de caja negativo";
+                        break;
+                    case "capacidadEndeudamiento":
+                        mensaje = "La capacidad de endeudamiento debe ser superior al 20%";
+                        break;
+                    case "mayor15vecesSalario":
+                        mensaje = "Las deudas del cliente superan 15 veces su salario";
+                        break;
+                    case "aprobado":
+                        mensaje = "El credito puede ser desembolsado, proceda a crearlo";
+                        btnCreditosDesembolsar.Enabled = true;
+                        dropCreditosProducto.Show();
+                        txtCreditosMonto.Show();
+                        txtCreditosPlazo.Show();
+                        this.cedula = cedula;
+                        break;
+                    default:
+                        mensaje = response;
+                        break;
+                }
             }
+            else
+            {
+                mensaje = "Por favor ingrese una cédula";
+                txtCreditosCedula.LineIdleColor = Color.FromArgb(235, 26, 45);
+            }
+
+
             this.MostrarMensaje(mensaje);
         }
 
@@ -88,6 +107,9 @@ namespace FrontEndWindowsForms
         {
             string cedula, producto, response;
             int monto, plazo;
+
+            OcultarCards();
+            CreditCard.Visible = true;
 
             cedula = this.cedula;
             producto = dropCreditosProducto.selectedValue;
@@ -109,5 +131,11 @@ namespace FrontEndWindowsForms
                 this.MostrarMensaje(response);
             }
         }
+        public void btnCreditosListar_Click(object sender, EventArgs e) {
+            OcultarCards();
+            CreditCard.Visible = true;
+            CreditCardListar.Visible = true;
+        }
+
     }
 }
