@@ -528,12 +528,12 @@ namespace FrontEndWindowsForms.BackendWebService {
     public partial class ConsultarClienteResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FrontEndWindowsForms.BackendWebService.ClienteModel ConsultarClienteResult;
+        public string ConsultarClienteResult;
         
         public ConsultarClienteResponseBody() {
         }
         
-        public ConsultarClienteResponseBody(FrontEndWindowsForms.BackendWebService.ClienteModel ConsultarClienteResult) {
+        public ConsultarClienteResponseBody(string ConsultarClienteResult) {
             this.ConsultarClienteResult = ConsultarClienteResult;
         }
     }
@@ -1065,7 +1065,7 @@ namespace FrontEndWindowsForms.BackendWebService {
             return base.Channel.ConsultarCliente(request);
         }
         
-        public FrontEndWindowsForms.BackendWebService.ClienteModel ConsultarCliente(string cedula) {
+        public string ConsultarCliente(string cedula) {
             FrontEndWindowsForms.BackendWebService.ConsultarClienteRequest inValue = new FrontEndWindowsForms.BackendWebService.ConsultarClienteRequest();
             inValue.Body = new FrontEndWindowsForms.BackendWebService.ConsultarClienteRequestBody();
             inValue.Body.cedula = cedula;

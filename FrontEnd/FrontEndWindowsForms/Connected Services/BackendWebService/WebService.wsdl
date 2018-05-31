@@ -40,7 +40,7 @@
       <s:element name="ConsultarClienteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ConsultarClienteResult" type="tns:ClienteModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarClienteResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>

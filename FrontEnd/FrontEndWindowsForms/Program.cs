@@ -16,7 +16,7 @@ namespace FrontEndWindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrontWindow());
+            Application.Run(new ClientesForm());
         }
     }
 }

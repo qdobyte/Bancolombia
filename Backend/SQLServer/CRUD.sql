@@ -53,11 +53,11 @@ go
 DROP PROCEDURE eliminarUsuario; 
 GO
 */
-create proc eliminarCliente
-	@IdCliente int
+create proc eliminarUsuario
+	@Cedula int
 As
 DELETE FROM Cliente
-WHERE id_cliente = @IdCliente
+WHERE cedula = @Cedula
 go
 
 exec eliminarCliente 1

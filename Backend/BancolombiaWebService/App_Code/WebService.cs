@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.Services;
 
 /// <summary>
@@ -23,7 +24,6 @@ public class WebService : System.Web.Services.WebService
 
     #region Client Methods
 
-
     [WebMethod]
     public List<ClienteModel> ListarClientes()
     {
@@ -33,11 +33,12 @@ public class WebService : System.Web.Services.WebService
 
 
     [WebMethod]
-    public ClienteModel ConsultarCliente(string cedula)
+    public string ConsultarCliente(string cedula)
     {
         ClienteModel clienteModelo = new ClienteModel();
         clienteModelo.ConsultarCliente(cedula);
-        return clienteModelo;
+        JavaScriptSerializer js = new JavaScriptSerializer();
+        return js.Serialize(clienteModelo);
     }
 
     [WebMethod]

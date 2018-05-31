@@ -18,7 +18,7 @@ public class ConexionSQL
     #region Constructor
     public ConexionSQL()
     {
-        this.connectionString = "Data Source=VPC-CGUTIERREZ; Initial Catalog=Bancolombia; Integrated Security = true";
+        this.connectionString = "Data Source=QDOBYTE\\MYSQL; Initial Catalog=Bancolombia; Integrated Security = true";
         this.sqlConnection = new SqlConnection(this.connectionString);
         this.sqlCommand = new SqlCommand(); //Insert into, Delete, Update, Select   
 
